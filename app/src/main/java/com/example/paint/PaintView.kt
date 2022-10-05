@@ -15,7 +15,7 @@ import com.example.paint.MainActivity.Companion.path
 
 class PaintView :View{
 
-    var params : ViewGroup.LayoutParams?= null
+    var params : ViewGroup.LayoutParams?= null  // heigh and weight with resp parent lengh
 
     companion object{
         var pathList= ArrayList<Path>()
@@ -24,7 +24,7 @@ class PaintView :View{
     }
 
     constructor(context: Context) : this(context, null){
-      init()
+      init()  // consturctor will call init
 
     }
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0){
@@ -37,10 +37,10 @@ class PaintView :View{
     private fun init(){
 
          paintBrush.isAntiAlias = true
-        paintBrush.color = currentBrush
+        paintBrush.color = currentBrush        // coloe
         paintBrush.style= Paint.Style.STROKE
         paintBrush.strokeJoin = Paint.Join.ROUND
-        paintBrush.strokeWidth = 8f
+        paintBrush.strokeWidth = 8f           //width
 
         params = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
     }
